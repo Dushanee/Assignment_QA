@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon Test Suite">
+    <test parallel="methods" thread-count="1" verbose="2" preserve-order="true" name="AmazonTest1">
+        <classes>
+            <class name="page_object_model.tests.AmazonTest">
+                <methods>
+                    <include name="test_searchLaptopsWithFreeShipping"/>
+                    <include name="test_navigateToAllClothing"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test  verbose="2" preserve-order="true" name="AmazonTest2">
+
+        <classes>
+            <class name="page_object_model.tests.LoginTestWithExcel">
+                <methods>
+                    <include name="test_completeLoginWithExcelData"/>
+
+
+                </methods>
+            </class>
+            <class name="page_object_model.tests.LoginTestWithDataProvider">
+                <methods>
+                    <include name="test_loginWithMultipleCredentials"/>
+
+
+                </methods>
+            </class>
+            <class name="page_object_model.tests.DeliveryTestWithExcel">
+                <methods>
+                    <include name="test_selectDeliveryLocation"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test parallel="methods" thread-count="2" verbose="2" preserve-order="true" name="AmazonTest3">
+        <classes>
+            <class name="page_object_model.tests.AmazonTest">
+                <methods>
+                    <include name="test_searchLaptopsWithFreeShipping"/>
+                    <include name="test_navigateToAllClothing"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
